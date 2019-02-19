@@ -1,0 +1,35 @@
+= conan.io - A C++ dependency manager
+:imagesdir: images
+:icons: font
+:date: March 11, 2019
+:my_name: Bernd Doser
+:my_email: bernd.doser@h-its.org
+:my_twitter: BerndDoser
+:my_github: BerndDoser
+:revealjs_slideNumber: true
+:revealjs_center: false
+:customcss: custom.css
+:stem:
+
+https://h-its.org[HITS gGmbH] +
+
+mailto:{my_email}[{my_name}], {date}
+
+
+== Introduction
+
+* Package manager: Install applications, libraries and tools on a system, e.g. apt (Linux), brew (MacOS)
+
+* Dependency manager: Handle project dependencies across environments, e.g. pip (Python), npm (NodeJS), gradle (Java)
+
+And C++?
+
+=== Docker Development containers
+
+image::docker-devel-env.jpg[width=60%]
+
+[NOTE.speaker]
+--
+- Modular build 
+--
+
