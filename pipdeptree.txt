@@ -1,0 +1,39 @@
+
+combine --package with --graph-output
+https://github.com/naiquevin/pipdeptree/issues/87
+
+pipdeptree -p tensorflow-gpu
+
+ tensorflow-gpu==1.12.0
+  - absl-py [required: >=0.1.6, installed: 0.7.0]
+    - six [required: Any, installed: 1.12.0]
+  - astor [required: >=0.6.0, installed: 0.7.1]
+  - gast [required: >=0.2.0, installed: 0.2.2]
+  - grpcio [required: >=1.8.6, installed: 1.18.0]
+    - six [required: >=1.5.2, installed: 1.12.0]
+  - keras-applications [required: >=1.0.6, installed: 1.0.7]
+    - h5py [required: Any, installed: 2.9.0]
+      - numpy [required: >=1.7, installed: 1.16.1]
+      - six [required: Any, installed: 1.12.0]
+    - numpy [required: >=1.9.1, installed: 1.16.1]
+  - keras-preprocessing [required: >=1.0.5, installed: 1.0.9]
+    - numpy [required: >=1.9.1, installed: 1.16.1]
+    - six [required: >=1.9.0, installed: 1.12.0]
+  - numpy [required: >=1.13.3, installed: 1.16.1]
+  - protobuf [required: >=3.6.1, installed: 3.6.1]
+    - setuptools [required: Any, installed: 40.8.0]
+    - six [required: >=1.9, installed: 1.12.0]
+  - six [required: >=1.10.0, installed: 1.12.0]
+  - tensorboard [required: >=1.12.0,<1.13.0, installed: 1.12.2]
+    - grpcio [required: >=1.6.3, installed: 1.18.0]
+      - six [required: >=1.5.2, installed: 1.12.0]
+    - markdown [required: >=2.6.8, installed: 3.0.1]
+    - numpy [required: >=1.12.0, installed: 1.16.1]
+    - protobuf [required: >=3.4.0, installed: 3.6.1]
+      - setuptools [required: Any, installed: 40.8.0]
+      - six [required: >=1.9, installed: 1.12.0]
+    - six [required: >=1.10.0, installed: 1.12.0]
+    - werkzeug [required: >=0.11.10, installed: 0.14.1]
+    - wheel [required: >=0.26, installed: 0.33.0]
+  - termcolor [required: >=1.1.0, installed: 1.1.0]
+  - wheel [required: >=0.26, installed: 0.33.0]

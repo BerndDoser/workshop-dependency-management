@@ -24,6 +24,17 @@ mailto:{my_email}[{my_name}], {date}
 
 And C++?
 
+
+=== Tensorflow dependencies
+
+image::tensorflow-pipdeptree.jpg[width=80%]
+
+[NOTE.speaker]
+--
+- Multiple depenedencies to same module but with different version requirements 
+--
+
+
 === Docker Development containers
 
 image::docker-devel-env.jpg[width=60%]
