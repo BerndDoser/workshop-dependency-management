@@ -1,4 +1,5 @@
-= conan.io - A C++ dependency manager
+= Dependency Management
+
 :imagesdir: images
 :icons: font
 :date: March 11, 2019
@@ -9,7 +10,7 @@
 :revealjs_slideNumber: true
 :revealjs_center: false
 :customcss: custom.css
-:stem:
+:source-highlighter: highlightjs
 
 https://h-its.org[HITS gGmbH] +
 
@@ -18,12 +19,29 @@ mailto:{my_email}[{my_name}], {date}
 
 == Introduction
 
-* Package manager: Install applications, libraries and tools on a system, e.g. apt (Linux), brew (MacOS)
+Dependency management is a technique for declaring, resolving and using dependencies required by the project in an automated fashion.
 
-* Dependency manager: Handle project dependencies across environments, e.g. pip (Python), npm (NodeJS), gradle (Java)
+(Source: https://devopedia.org/dependency-manager[Devopedia])
 
-And C++?
 
+== Package vs Dependency
+
+[%step]
+* Package manager: Install applications, libraries and tools on a system
+** apt (Linux)
+** brew (MacOS)
+
+* Dependency manager: Handle project dependencies across environments
+** pip, conda (Python)
+** conan ({cpp})
+//** npm (NodeJS)
+//** gradle (Java)
+
+[NOTE.speaker]
+--
+- pip was building everything from scratch, until wheels were introduced
+- conda has more packages
+--
 
 === Tensorflow dependencies
 
@@ -32,10 +50,47 @@ image::tensorflow-pipdeptree.jpg[width=80%]
 [NOTE.speaker]
 --
 - Multiple depenedencies to same module but with different version requirements 
+- Required version as lower bound
 --
 
 
-=== Docker Development containers
+=== Python packaging
+
+[source, python]
+----
+import setuptools
+
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+
+setuptools.setup(
+    name="example-pkg-your-username",
+    version="0.0.1",
+    author="Example Author",
+    author_email="author@example.com",
+    description="A small example package",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="https://github.com/pypa/sampleproject",
+    packages=setuptools.find_packages(),
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
+)
+----
+
+https://packaging.python.org/tutorials/packaging-projects/#creating-setup-py[Docu] / 
+https://github.com/tensorflow/tensorflow/blob/master/tensorflow/tools/pip_package/setup.py#L50[Example Tensorflow]
+
+[NOTE.speaker]
+--
+- Example Tensorflow shows the dependencies in slide before
+--
+
+
+== Docker Development containers
 
 image::docker-devel-env.jpg[width=60%]
 
@@ -43,4 +98,7 @@ image::docker-devel-env.jpg[width=60%]
 --
 - Modular build 
 --
+
+
+== C++ dependency management with onan.io
 
