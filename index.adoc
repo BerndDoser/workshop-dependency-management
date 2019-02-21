@@ -100,5 +100,65 @@ image::docker-devel-env.jpg[width=60%]
 --
 
 
-== C++ dependency management with onan.io
+== C++ dependency management with conan.io
+
+=== Conan repositories
+
+[%step]
+* https://bintray.com/conan/conan-center[conan-center]: Official maintained by the Conan team (178 packages)
+* https://bintray.com/bincrafters/public-conan[bincrafters]: Group of OSS developers (370 packages)
+* https://bintray.com/braintwister/conan[braintwister]: Personal repository at Bintray for OSS
+* Running _conan_server_ for on-site repository
+
+
+=== Installing dependencies
+
+_conanfile.txt_
+[source, txt]
+----
+[requires]
+Poco/1.9.0@pocoproject/stable
+
+[generators]
+cmake
+----
+
+name / version @ user / channel
+
+
+=== Creating package
+
+_conanfile.py_
+[source, python]
+----
+from conans import ConanFile, CMake
+
+class HelloConan(ConanFile):
+    name = "Hello"
+    version = "0.1"
+    license = "<Put the package license here>"
+    url = "<Package recipe repository url>"
+    description = "<Description of Hello here>"
+    settings = "os", "compiler", "build_type", "arch"
+    options = {"shared": [True, False]}
+    default_options = {"shared": False}
+    generators = "cmake"
+
+    def source(self):
+        self.run("git clone https://github.com/memsharded/hello.git")
+        self.run("cd hello")
+
+    def build(self):
+        cmake = CMake(self)
+        cmake.configure(source_folder="hello")
+        cmake.build()
+
+    def package(self):
+        self.copy("*.h", dst="include", src="hello")
+        self.copy("*.so", dst="lib", keep_path=False)
+
+    def package_info(self):
+        self.cpp_info.libs = ["hello"]
+----
+
 

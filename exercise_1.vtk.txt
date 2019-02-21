@@ -1,0 +1,8 @@
+docker run -it -v /work -w /work braintwister/ubuntu-18.04-cmake-3.13-gcc-7-conan-1.12 bash
+
+conan remote list
+
+conan search -r all vtk
+
+
+conan create .. braintwister/testing
