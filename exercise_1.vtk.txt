@@ -6,4 +6,6 @@ conan search -r all record
 
 git clone https://github.com/BrainTwister/record.git
 
-conan create .. braintwister/testing
+conan create . braintwister/testing
+conan create . braintwister/testing --build gtest
+conan create . braintwister/testing --build missing
