@@ -43,7 +43,14 @@ Dependency management is a technique for declaring, resolving and using dependen
 - conda has more packages
 --
 
-=== Tensorflow dependencies
+== What is a dependency
+
+* A software unit A (application, module, library) uses functionality of an second software unit B
+* A depends on B, A -> B
+
+== Dependency Graph
+
+_Example: Tensorflow_
 
 image::tensorflow-pipdeptree.jpg[width=80%]
 
@@ -54,8 +61,9 @@ image::tensorflow-pipdeptree.jpg[width=80%]
 --
 
 
-=== Python packaging
+== Python packaging
 
+_setup.py_
 [source, python]
 ----
 import setuptools
@@ -102,7 +110,7 @@ image::docker-devel-env.jpg[width=60%]
 
 == C++ dependency management with conan.io
 
-=== Conan repositories
+== Conan repositories
 
 [%step]
 * https://bintray.com/conan/conan-center[conan-center]: Official maintained by the Conan team (178 packages)
@@ -111,7 +119,7 @@ image::docker-devel-env.jpg[width=60%]
 * Running _conan_server_ for on-site repository
 
 
-=== Installing dependencies
+== Installing dependencies
 
 _conanfile.txt_
 [source, txt]
@@ -126,7 +134,7 @@ cmake
 name / version @ user / channel
 
 
-=== Creating package
+== Creating package
 
 _conanfile.py_
 [source, python]

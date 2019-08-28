@@ -1,0 +1,22 @@
+docker run -it braintwister/ubuntu-18.04 bash
+
+# What is installed
+pip --version
+pip list
+
+# Install virtualenv
+pip install --user virtualenv
+
+# Add local module into PATH
+export PATH=/home/user/.local/bin:$PATH
+
+# Create venv
+virtualenv tensorflow-1.14
+
+# Why tensorflow is not listed?
+pip list
+
+# Enter venv
+source ./tensorflow-1.14/bin/activate
+
+pip install tensorflow==1.14
