@@ -47,7 +47,14 @@ Dependency management is a technique for declaring, resolving and using dependen
 - conda has more packages
 --
 
-== Tensorflow dependencies
+== What is a dependency
+
+* A software unit A (application, module, library) uses functionality of an second software unit B
+* A depends on B, A -> B
+
+== Dependency Graph
+
+_Example: Tensorflow_
 
 image::tensorflow-pipdeptree.jpg[width=80%]
 
@@ -60,6 +67,7 @@ image::tensorflow-pipdeptree.jpg[width=80%]
 
 == Python packaging
 
+_setup.py_
 [source, python]
 ----
 import setuptools
