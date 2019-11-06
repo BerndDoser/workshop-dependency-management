@@ -23,6 +23,10 @@ Dependency management is a technique for declaring, resolving and using dependen
 
 (Source: https://devopedia.org/dependency-manager[Devopedia])
 
+[NOTE.speaker]
+--
+- Keep your dependencies up to date to reduce technical debts
+--
 
 == Package vs Dependency
 
