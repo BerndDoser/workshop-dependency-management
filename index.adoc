@@ -60,6 +60,8 @@ image::tensorflow-pipdeptree.jpg[width=80%]
 - Required version as lower bound
 --
 
+== Exercise 1
+_Install TensorFlow in virtualenv_
 
 == Python packaging
 
