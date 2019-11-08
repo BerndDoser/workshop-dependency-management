@@ -16,7 +16,23 @@ virtualenv tensorflow-1.14
 # Why tensorflow is not listed?
 pip list
 
-# Enter venv
+# Enter virtenv
 source ./tensorflow-1.14/bin/activate
 
-pip install tensorflow==1.14
+# Install TensorFlow package
+pip install tensorflow
+
+# Leave virtenv
+deactivate
+
+
+
+
+# Maintain installed packages
+## Print all installed packages
+pip freeze > requirements
+
+
+
+# Build wheel
+docker run -i -t -v $PWD:/work quay.io/pypa/manylinux2010_x86_64 /bin/bash

@@ -64,7 +64,15 @@ image::tensorflow-pipdeptree.jpg[width=80%]
 - Required version as lower bound
 --
 
-== Exercise 1
+== PIP 
+
+- Find, install and publish Python packages: https://pypi.org
+
+- Most dependencies are project related.
+- Use a virtual environment and a list of requirements to organize your dependencies.
+
+== Exercise 1: Using pip
+
 _Install TensorFlow in virtualenv_
 
 == Python packaging
