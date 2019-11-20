@@ -49,8 +49,42 @@ Dependency management is a technique for declaring, resolving and using dependen
 
 == What is a dependency
 
-* A software unit A (application, module, library) uses functionality of an second software unit B
+* A software unit A (application, module, library) uses functionality of a second software unit B
 * A depends on B, A -> B
+
+
+== Version specifier
+
+* Comparison
++
+[source, txt]
+----
+==: exact match
+!=: exclusion
+<=,>=: inclusive ordered
+<,>: exclusive ordered
+----
+* Compatibility
++
+[source, txt]
+----
+~= 1.4.5
+>= 1.4.5, == 1.4.*
+----
+* Combination
++
+[source, txt]
+----
+~=3.1.0, != 3.1.3: version 3.1.0 or later,
+                   but not version 3.1.3
+                   and not version 3.2.0 or later
+----
+
+[NOTE.speaker]
+--
+- Version specifiers for stability
+- cover patch releases with bug fixes, without adjust the version number in your dependency list
+--
 
 == Dependency Graph
 
@@ -111,8 +145,11 @@ https://github.com/tensorflow/tensorflow/blob/master/tensorflow/tools/pip_packag
 - Example Tensorflow shows the dependencies in slide before
 --
 
+== Python Wheels
 
-== Docker Development containers
+- Only runtime requirements and not the build-time requirements are needed
+
+== Docker Development Containers
 
 image::docker-devel-env.jpg[width=60%]
 

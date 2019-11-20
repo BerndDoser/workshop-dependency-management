@@ -2,7 +2,7 @@ version: "3"
 services:
 
   vscode:
-    image: braintwister/ubuntu-18.04-vscode-1.39
+    image: braintwister/ubuntu-18.04-vscode-1.40
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix:ro 
       - /etc/localtime:/etc/localtime:ro
