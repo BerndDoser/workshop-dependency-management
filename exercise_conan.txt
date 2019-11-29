@@ -10,3 +10,12 @@ git clone https://github.com/BrainTwister/record.git
 conan create . braintwister/testing
 conan create . braintwister/testing --build gtest
 conan create . braintwister/testing --build missing
+
+
+
+# Third party packaging
+https://github.com/darcamo/conan-xtensor.git
+conan-blaze ???
+
+# Remotes
+https://bintray.com/braintwister
