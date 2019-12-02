@@ -1,0 +1,17 @@
+introduction dependency management		20
+docker environment				20
+vscode						15   55
+
+break						15   70
+
+python pip, virtenv, requirements		20
+python setup.py					30
+python wheels					20  140
+
+break						15  155
+
+conan install					30
+conan create					30
+conan remotes					25  240
+
+

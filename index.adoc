@@ -16,6 +16,17 @@ https://h-its.org[HITS gGmbH] +
 
 mailto:{my_email}[{my_name}], {date}
 
+== Outline
+
+[%step]
+* Introduction dependency management
+* Docker development environment
+* Visual Studio Code
+* Python
+** PIP, virtenv, setup.py, wheels
+* Conan.io
+** install, create, remotes
+
 
 == Introduction
 
