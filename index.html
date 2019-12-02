@@ -10,7 +10,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );</script><!--[if 
 <aside class="notes"><div class="ulist"><ul><li><p>Keep your dependencies up to date to reduce technical debts</p></li></ul></div></aside></section>
 <section id="package_vs_dependency"><h2>Package vs Dependency</h2><div class="ulist"><ul><li class="fragment"><p>Package manager: Install applications, libraries and tools on a system</p><div class="ulist"><ul><li><p>apt (Linux)</p></li><li><p>brew (MacOS)</p></li></ul></div></li><li class="fragment"><p>Dependency manager: Handle project dependencies across environments</p><div class="ulist"><ul><li><p>pip, conda (Python)</p></li><li><p>conan (C&#43;&#43;)</p></li></ul></div></li></ul></div>
 <aside class="notes"><div class="ulist"><ul><li><p>pip was building everything from scratch, until wheels were introduced</p></li><li><p>conda has more packages</p></li></ul></div></aside></section>
-<section id="what_is_a_dependency"><h2>What is a dependency</h2><div class="ulist"><ul><li><p>A software unit A (application, module, library) uses functionality of a second software unit B</p></li><li><p>A depends on B, A &#8594; B</p></li></ul></div></section>
+<section id="what_is_a_dependency"><h2>What is a dependency</h2><div class="ulist"><ul><li><p>Module A uses functionality of module B</p></li><li><p>Transitive dependency &#8594; Dependency graph</p><div class="imageblock" style=""><img src="images/transitive.jpg" alt="transitive"></div></li><li><p>Circular dependency</p><div class="imageblock" style=""><img src="images/circular.jpg" alt="circular"></div></li></ul></div></section>
 <section id="version_specifier"><h2>Version specifier</h2><div class="ulist"><ul><li><p>Comparison</p><div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="txt language-txt">==: exact match
 !=: exclusion
 &lt;=,&gt;=: inclusive ordered
@@ -19,10 +19,13 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );</script><!--[if 
                    but not version 3.1.3
                    and not version 3.2.0 or later</code></pre></div></div></li></ul></div>
 <aside class="notes"><div class="ulist"><ul><li><p>Version specifiers for stability</p></li><li><p>cover patch releases with bug fixes, without adjust the version number in your dependency list</p></li></ul></div></aside></section>
-<section id="dependency_graph"><h2>Dependency Graph</h2><div class="paragraph"><p><em>Example: Tensorflow</em></p></div>
-<div class="imageblock" style=""><img src="images/tensorflow-pipdeptree.jpg" alt="tensorflow pipdeptree" width="80%"></div>
+<section id="dependency_graph" data-background-image="images/tensorflow-pipdeptree.jpg" data-background-size="90%">
 <aside class="notes"><div class="ulist"><ul><li><p>Multiple depenedencies to same module but with different version requirements</p></li><li><p>Required version as lower bound</p></li></ul></div></aside></section>
+<section id="docker_development_environment"><h2>Docker Development Environment</h2><div class="ulist"><ul><li><p>Fast</p></li><li><p>Portable</p></li><li><p>Reproducible</p></li><li><p>Uniform</p></li><li><p>Traceable</p></li><li><p>Modular</p></li></ul></div></section>
+<section id="docker_development_environment_2"><h2>Docker Development Environment</h2><div class="imageblock" style=""><img src="images/docker-devel-env.jpg" alt="docker devel env" width="60%"></div></section>
+<section id="visual_studio_code"><h2>Visual Studio Code</h2></section>
 <section id="pip"><h2>PIP</h2><div class="ulist"><ul><li><p>Find, install and publish Python packages: <a href="https://pypi.org" class="bare">https://pypi.org</a></p></li><li><p>Most dependencies are project related.</p></li><li><p>Use a virtual environment and a list of requirements to organize your dependencies.</p></li></ul></div></section>
+<section id="identify_dependency_relationship"><h2>Identify dependency relationship</h2><div class="ulist"><ul><li><p>pip show</p></li><li><p>pipdeptree</p></li><li><p>Why is a package</p></li></ul></div></section>
 <section id="exercise_1_using_pip"><h2>Exercise 1: Using pip</h2><div class="paragraph"><p><em>Install TensorFlow in virtualenv</em></p></div></section>
 <section id="python_packaging"><h2>Python packaging</h2><div class="paragraph"><p><em>setup.py</em></p></div>
 <div class="listingblock"><div class="content"><pre class="highlight"><code data-noescape class="python language-python">import setuptools
@@ -50,8 +53,6 @@ setuptools.setup(
 <a href="https://github.com/tensorflow/tensorflow/blob/master/tensorflow/tools/pip_package/setup.py#L50">Example Tensorflow</a></p></div>
 <aside class="notes"><div class="ulist"><ul><li><p>Example Tensorflow shows the dependencies in slide before</p></li></ul></div></aside></section>
 <section id="python_wheels"><h2>Python Wheels</h2><div class="ulist"><ul><li><p>Only runtime requirements and not the build-time requirements are needed</p></li></ul></div></section>
-<section id="docker_development_containers"><h2>Docker Development Containers</h2><div class="imageblock" style=""><img src="images/docker-devel-env.jpg" alt="docker devel env" width="60%"></div>
-<aside class="notes"><div class="ulist"><ul><li><p>Modular build</p></li></ul></div></aside></section>
 <section id="c_dependency_management_with_conan_io"><h2>C++ dependency management with conan.io</h2></section>
 <section id="conan_repositories"><h2>Conan repositories</h2><div class="ulist"><ul><li class="fragment"><p><a href="https://bintray.com/conan/conan-center">conan-center</a>: Official maintained by the Conan team (178 packages)</p></li><li class="fragment"><p><a href="https://bintray.com/bincrafters/public-conan">bincrafters</a>: Group of OSS developers (370 packages)</p></li><li class="fragment"><p><a href="https://bintray.com/braintwister/conan">braintwister</a>: Personal repository at Bintray for OSS</p></li><li class="fragment"><p>Running <em>conan_server</em> for on-site repository</p></li></ul></div></section>
 <section id="installing_dependencies"><h2>Installing dependencies</h2><div class="paragraph"><p><em>conanfile.txt</em></p></div>

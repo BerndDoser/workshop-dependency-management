@@ -60,8 +60,13 @@ Dependency management is a technique for declaring, resolving and using dependen
 
 == What is a dependency
 
-* A software unit A (application, module, library) uses functionality of a second software unit B
-* A depends on B, A -> B
+* Module A uses functionality of module B
+* Transitive dependency -> Dependency graph
++
+image::transitive.jpg[size=70%]
+* Circular dependency
++
+image::circular.jpg[size=70%]
 
 
 == Version specifier
@@ -97,17 +102,36 @@ Dependency management is a technique for declaring, resolving and using dependen
 - cover patch releases with bug fixes, without adjust the version number in your dependency list
 --
 
+
+[%notitle]
 == Dependency Graph
 
-_Example: Tensorflow_
-
-image::tensorflow-pipdeptree.jpg[width=80%]
+image::tensorflow-pipdeptree.jpg[background, size=90%]
 
 [NOTE.speaker]
 --
 - Multiple depenedencies to same module but with different version requirements 
 - Required version as lower bound
 --
+
+
+== Docker Development Environment
+
+* Fast
+* Portable
+* Reproducible
+* Uniform
+* Traceable
+* Modular
+
+
+== Docker Development Environment
+
+image::docker-devel-env.jpg[width=60%]
+
+
+== Visual Studio Code
+
 
 == PIP 
 
@@ -116,9 +140,18 @@ image::tensorflow-pipdeptree.jpg[width=80%]
 - Most dependencies are project related.
 - Use a virtual environment and a list of requirements to organize your dependencies.
 
+
+== Identify dependency relationship
+
+* pip show
+* pipdeptree
+* Why is a package 
+
+
 == Exercise 1: Using pip
 
 _Install TensorFlow in virtualenv_
+
 
 == Python packaging
 
@@ -159,15 +192,6 @@ https://github.com/tensorflow/tensorflow/blob/master/tensorflow/tools/pip_packag
 == Python Wheels
 
 - Only runtime requirements and not the build-time requirements are needed
-
-== Docker Development Containers
-
-image::docker-devel-env.jpg[width=60%]
-
-[NOTE.speaker]
---
-- Modular build 
---
 
 
 == C++ dependency management with conan.io
