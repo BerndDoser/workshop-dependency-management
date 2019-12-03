@@ -40,6 +40,19 @@ pip freeze > requirements.txt
 
 
 
+# Install tqdm with setup.py
+git clone https://github.com/tqdm/tqdm.git
+
+python3 setup.py install --user
+
+# Test 
+import time
+from tqdm import tqdm
+for i in tqdm(range(1000)):
+    time.sleep(0.1)
+
+
+
 # Build wheel
 docker run -it -v $PWD:/work quay.io/pypa/manylinux2010_x86_64 /bin/bash
 

@@ -1,6 +1,17 @@
 # Start container
 docker run -d --rm --name vscode -v vscode_home:/home/user --net=host -e DISPLAY braintwister/ubuntu-18.04-clang-8-vscode-1.40
 
+git clone https://github.com/BerndDoser/conan-example.git
+
+md build
+cd build
+cmake ..
+
+conan install ..
+
+
+
+
 conan remote list
 
 conan search -r all record
