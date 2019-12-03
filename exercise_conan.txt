@@ -1,5 +1,5 @@
 # Start container
-docker run -d --name vscode -v vscode_home:/home/user --net=host -e DISPLAY braintwister/ubuntu-18.04-clang-9-vscode-1.40
+docker run -d --rm --name vscode -v vscode_home:/home/user --net=host -e DISPLAY braintwister/ubuntu-18.04-clang-8-vscode-1.40
 
 conan remote list
 
