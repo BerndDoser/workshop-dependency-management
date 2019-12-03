@@ -12,9 +12,23 @@
 :customcss: custom.css
 :source-highlighter: highlightjs
 
-https://h-its.org[HITS gGmbH] +
+https://h-its.org[HITS gGmbH]
 
 mailto:{my_email}[{my_name}], {date}
+
+https://twitter.com/{my_twitter}[icon:twitter[] BerndDoser] https://github.com/{my_github}[icon:github[] BerndDoser]
+
+
+== Who am I?
+
+* https://github.com/HITS-MBM/gromacs-fda[GROMACS-FDA]
+* https://github.com/HITS-AIN/PINK[PINK]
+* https://github.com/HITS-MCM/gromacs-ramd[GROMACS-RAMD]
+* https://emcl-gitlab.iwr.uni-heidelberg.de/hiflow3.org/hiflow3[HiFlow3]
+
+
+
+
 
 == Outline
 
