@@ -1,5 +1,3 @@
-docker run -it braintwister/ubuntu-18.04 bash
-
 # What is installed
 pip --version
 pip list
@@ -10,14 +8,14 @@ pip install --user virtualenv
 # Add local module into PATH
 export PATH=/home/user/.local/bin:$PATH
 
-# Create venv
-virtualenv tensorflow-1.14
+# Create virtual environment
+virtualenv tensorflow
 
 # Why tensorflow is not listed?
 pip list
 
 # Enter virtenv
-source ./tensorflow-1.14/bin/activate
+source tensorflow/bin/activate
 
 # Install TensorFlow package
 pip install tensorflow
@@ -27,12 +25,25 @@ deactivate
 
 
 
+# Show dependencies
+pip show tensorflow
 
-# Maintain installed packages
-## Print all installed packages
-pip freeze > requirements
+# combine --package with --graph-output
+https://github.com/naiquevin/pipdeptree/issues/87
+
+# Dependency graph
+pipdeptree -p tensorflow
+
+# Print all installed packages
+pip list
+pip freeze > requirements.txt
 
 
 
 # Build wheel
-docker run -i -t -v $PWD:/work quay.io/pypa/manylinux2010_x86_64 /bin/bash
+docker run -it -v $PWD:/work quay.io/pypa/manylinux2010_x86_64 /bin/bash
+
+# With cuda
+docker run -it -v $PWD:/work bernddoser/manylinux2010-cuda /bin/bash
+
+/opt/python/cp36-cp36m/bin/pip wheel -w output .
