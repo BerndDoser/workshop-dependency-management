@@ -1,6 +1,6 @@
-# conan.io - A C++ dependency manager
+# HITS workshop: Dependency management
 
-Slides given in a workshop at [HITS](https://h-its.org). View them [here](https://bernddoser.github.io/workshop-conan/).
+Dependency management workshop at [HITS](https://h-its.org). View them [here](https://bernddoser.github.io/workshop-conan/).
 
 Build with
 ```

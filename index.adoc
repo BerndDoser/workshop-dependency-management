@@ -54,6 +54,7 @@ Dependency management is a technique for declaring, resolving and using dependen
 
 - Keep your dependencies up to date to reduce technical debts
 - Most dependencies are project related
+- Distinguish build-time and runtime requirements
 
 
 == Package vs Dependency
@@ -130,19 +131,16 @@ image::tensorflow-pipdeptree.jpg[background, size=90%]
 --
 
 
-== Docker Development Environment
+== Docker
 
-* Fast
-* Portable
-* Reproducible
-* Uniform
-* Traceable
-* Modular
+* Important tool for software development
+* Fast, Portable, Reproducible, Uniform, Traceable, Modular, ...
+* DockerHub
 
 
 == Docker Development Environment
 
-image::docker-devel-env.jpg[width=60%]
+image::docker-devel-env.jpg[link=https://github.com/BrainTwister/docker-devel-env,width=60%]
 
 
 == Visual Studio Code
@@ -163,17 +161,20 @@ image::docker-devel-env.jpg[width=60%]
 
 == Package installer for Python (PIP) 
 
-- Dependency Manager
 - https://pypi.org[Python Package Index,role=external,window=_blank]
 - Build recipe as code 'setup.py' from setuptools
 - Wheels for platform-specific C extensions (replace eggs)
 - Docker image 'manylinux' with old 'glibc' to support most Linux distributions
 
 
-== Exercise 1: Using pip
+== Exercise 1
 
 _Install TensorFlow in virtualenv_
 
+* Install virtualenv
+* Create and activate virtualenv 'tensorflow'
+* Install tensorflow
+* Test tensorflow
 
 == Python packaging
 
@@ -206,17 +207,33 @@ setuptools.setup(
 https://packaging.python.org/tutorials/packaging-projects/#creating-setup-py[Docu] / 
 https://github.com/tensorflow/tensorflow/blob/master/tensorflow/tools/pip_package/setup.py#L50[Example Tensorflow]
 
-[NOTE.speaker]
---
-- Example Tensorflow shows the dependencies in slide before
---
 
-== Python Wheels
+== Exercise 2 
 
-- Only runtime requirements and not the build-time requirements are needed
+_Install tqdm with setup.py_
+
+* Clone https://github.com/tqdm/tqdm[tqdm] from GitHub
+* Install via setup.py
+* Test tqdm
+
+
+== Exercise 3 
+
+_Create package python-example_
+
+* Clone https://github.com/BerndDoser/python-example[python-example] from GitHub
+* Create package
+* Upload to https://test.pypi.org[role=external,window=_blank]
 
 
 == C++ dependency management with conan.io
+
+* Decentralized package manager
+* Client-server architecture similar to git push/pull
+* CMake integration with https://github.com/conan-io/cmake-conan[cmake-conan]
+* Support all platforms (Linux, Apple, Windows, Android, embedded, ...)
+* Support all build (CMake, Makefile, Visual Studio, ...)
+
 
 == Conan repositories
 
@@ -249,8 +266,8 @@ _conanfile.py_
 ----
 from conans import ConanFile, CMake
 
-class HelloConan(ConanFile):
-    name = "Hello"
+class PackageConan(ConanFile):
+    name = "<package name>"
     version = "0.1"
     license = "<Put the package license here>"
     url = "<Package recipe repository url>"
@@ -277,4 +294,25 @@ class HelloConan(ConanFile):
         self.cpp_info.libs = ["hello"]
 ----
 
+
+== Exercise 4 
+
+_Install range-v3 with conan_
+
+* Clone https://github.com/BerndDoser/conan-example[conan-example] from GitHub
+* Install with conanfile.txt
+* Compile and run
+
+
+== Exercise 5 
+
+_Build package conan-example_
+
+* Write conanfile.py
+* Create package
+
+
+== Thank you 
+
+https://bernddoser.github.io/workshop-dependency-management
 

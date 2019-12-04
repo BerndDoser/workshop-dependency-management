@@ -53,11 +53,17 @@ for i in tqdm(range(1000)):
 
 
 
+# build package
+pip install setuptools wheel twine
+
+python3 setup.py sdist bdist_wheel
+
+python3 -m twine upload --repository-url https://test.pypi.org/legacy/ dist/*
 
 
 
 
-# Build wheel
+# Build manylinux wheel
 docker run -it -v $PWD:/work quay.io/pypa/manylinux2010_x86_64 /bin/bash
 
 # With cuda
