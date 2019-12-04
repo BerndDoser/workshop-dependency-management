@@ -16,7 +16,7 @@ mailto:{my_email}[{my_name}]
 
 {date}
 
-image:HITS_RGB_eng.jpg[link=https://h-its.org,width=40%]
+image:HITS_RGB_eng.jpg[link=https://h-its.org,width=40%,role=external,window=_blank]
 
 https://twitter.com/{my_twitter}[icon:twitter[]] https://github.com/{my_github}[icon:github[]]
 
@@ -26,12 +26,12 @@ https://twitter.com/{my_twitter}[icon:twitter[]] https://github.com/{my_github}[
 [%step]
 * PhD in theoretical chemistry
 * Scientific software developer since 15 years
-* https://github.com/HITS-MBM/gromacs-fda[GROMACS-FDA], https://github.com/HITS-MCM/gromacs-ramd[GROMACS-RAMD]
-* https://github.com/HITS-AIN/PINK[PINK]
-* https://emcl-gitlab.iwr.uni-heidelberg.de/hiflow3.org/hiflow3[HiFlow3]
+* https://github.com/HITS-MBM/gromacs-fda[GROMACS-FDA,role=external,window=_blank], https://github.com/HITS-MCM/gromacs-ramd[GROMACS-RAMD,role=external,window=_blank]
+* https://github.com/HITS-AIN/PINK[PINK,role=external,window=_blank]
+* https://emcl-gitlab.iwr.uni-heidelberg.de/hiflow3.org/hiflow3[HiFlow3,role=external,window=_blank]
 * Linear scaling electron-electron correlation
 * Tailor-made force fields
-* https://github.com/BrainTwister/BlasBooster[BlasBooster]
+* https://github.com/BrainTwister/BlasBooster[BlasBooster,role=external,window=_blank]
 
 
 == Outline
@@ -50,7 +50,7 @@ https://twitter.com/{my_twitter}[icon:twitter[]] https://github.com/{my_github}[
 
 Dependency management is a technique for declaring, resolving and using dependencies required by the project in an automated fashion.
 
-(Source: https://devopedia.org/dependency-manager[Devopedia])
+(Source: https://devopedia.org/dependency-manager[Devopedia,role=external,window=_blank])
 
 - Keep your dependencies up to date to reduce technical debts
 - Most dependencies are project related
@@ -133,30 +133,27 @@ image::tensorflow-pipdeptree.jpg[background, size=90%]
 
 == Docker
 
+* Virtualization of applications (lightweight VM)
+* Coded environment by https://github.com/BrainTwister/docker-devel-env/blob/master/vscode-1.40/Dockerfile[Dockerfile,role=external,window=_blank]
 * Important tool for software development
-* Fast, Portable, Reproducible, Uniform, Traceable, Modular, ...
-* DockerHub
+* Images shared at https://hub.docker.com/[DockerHub,role=external,window=_blank]
+* Flexible deployment (Orchestration) via Kubernetes
+* Continues Integration (https://jenkins.h-its.org/blue/organizations/jenkins/AIN%2FGitHub%20HITS-AIN%2FPINK/detail/master/211/pipeline[Jenkins,role=external,window=_blank]) in https://github.com/HITS-AIN/PINK/blob/master/Jenkinsfile[Jenkinsfile,role=external,window=_blank] 
 
 
 == Docker Development Environment
 
-image::docker-devel-env.jpg[link=https://github.com/BrainTwister/docker-devel-env,width=60%]
+image::docker-devel-env.jpg[link=https://github.com/BrainTwister/docker-devel-env,width=60%,role=external,window=_blank]
 
 
 == Visual Studio Code
 
-//[cols="2a,9a"]
-//|===
-//|
-//image::Visual_Studio_Code_1.35_icon.svg[]
-//|
 * Free and open source (not Microsoft Visual Studio)
 * Most popular development environment https://insights.stackoverflow.com/survey/2019#technology-_-most-popular-development-environments[2019]
 * Language Server Protocol (LSP) as open standard for language specific features
 ** code completion and navigation
 ** refactoring, syntax highlighting, error markers
 * embedded git and GitHub support
-//|===
 
 
 == Package installer for Python (PIP) 
@@ -204,8 +201,8 @@ setuptools.setup(
 )
 ----
 
-https://packaging.python.org/tutorials/packaging-projects/#creating-setup-py[Docu] / 
-https://github.com/tensorflow/tensorflow/blob/master/tensorflow/tools/pip_package/setup.py#L50[Example Tensorflow]
+https://packaging.python.org/tutorials/packaging-projects/#creating-setup-py[Docu,role=external,window=_blank] / 
+https://github.com/tensorflow/tensorflow/blob/master/tensorflow/tools/pip_package/setup.py#L50[Example Tensorflow,role=external,window=_blank]
 
 
 == Exercise 2 
@@ -221,7 +218,7 @@ _Install tqdm with setup.py_
 
 _Create package python-example_
 
-* Clone https://github.com/BerndDoser/python-example[python-example] from GitHub
+* Clone https://github.com/BerndDoser/python-example[python-example,role=external,window=_blank] from GitHub
 * Create package
 * Upload to https://test.pypi.org[role=external,window=_blank]
 
@@ -230,7 +227,7 @@ _Create package python-example_
 
 * Decentralized package manager
 * Client-server architecture similar to git push/pull
-* CMake integration with https://github.com/conan-io/cmake-conan[cmake-conan]
+* CMake integration with https://github.com/conan-io/cmake-conan[cmake-conan,role=external,window=_blank]
 * Support all platforms (Linux, Apple, Windows, Android, embedded, ...)
 * Support all build (CMake, Makefile, Visual Studio, ...)
 
@@ -299,7 +296,7 @@ class PackageConan(ConanFile):
 
 _Install range-v3 with conan_
 
-* Clone https://github.com/BerndDoser/conan-example[conan-example] from GitHub
+* Clone https://github.com/BerndDoser/conan-example[conan-example,role=external,window=_blank] from GitHub
 * Install with conanfile.txt
 * Compile and run
 
