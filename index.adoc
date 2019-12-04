@@ -48,10 +48,9 @@ Dependency management is a technique for declaring, resolving and using dependen
 
 (Source: https://devopedia.org/dependency-manager[Devopedia])
 
-[NOTE.speaker]
---
 - Keep your dependencies up to date to reduce technical debts
---
+- Most dependencies are project related.
+
 
 == Package vs Dependency
 
@@ -63,8 +62,6 @@ Dependency management is a technique for declaring, resolving and using dependen
 * Dependency manager: Handle project dependencies across environments
 ** pip, conda (Python)
 ** conan ({cpp})
-//** npm (NodeJS)
-//** gradle (Java)
 
 [NOTE.speaker]
 --
@@ -77,10 +74,10 @@ Dependency management is a technique for declaring, resolving and using dependen
 * Module A uses functionality of module B
 * Transitive dependency -> Dependency graph
 +
-image::transitive.jpg[size=70%]
+image::transitive.jpg[size=50%]
 * Circular dependency
 +
-image::circular.jpg[size=70%]
+image::circular.jpg[size=50%]
 
 
 == Version specifier
@@ -146,12 +143,24 @@ image::docker-devel-env.jpg[width=60%]
 
 == Visual Studio Code
 
+//[cols="2a,9a"]
+//|===
+//|
+//image::Visual_Studio_Code_1.35_icon.svg[]
+//|
+* Free and open source (not Microsoft Visual Studio)
+* Most popular development environment https://insights.stackoverflow.com/survey/2019#technology-_-most-popular-development-environments[2019]
+* Language Server Protocol (LSP) as open standard for language specific features
+** code completion and navigation
+** refactoring, syntax highlighting, error markers
+* embedded git and GitHub support
+//|===
+
 
 == PIP 
 
 - Find, install and publish Python packages: https://pypi.org
 
-- Most dependencies are project related.
 - Use a virtual environment and a list of requirements to organize your dependencies.
 
 
