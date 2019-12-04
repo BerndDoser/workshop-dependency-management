@@ -12,9 +12,12 @@
 :customcss: custom.css
 :source-highlighter: highlightjs
 
-https://h-its.org[HITS gGmbH]
+mailto:{my_email}[{my_name}]
 
-mailto:{my_email}[{my_name}], {date}
+{date}
+
+image::HITS_RGB_eng.jpg[width=40%]
+https://h-its.org[HITS gGmbH]
 
 https://twitter.com/{my_twitter}[icon:twitter[]] https://github.com/{my_github}[icon:github[]]
 
