@@ -37,7 +37,7 @@ https://twitter.com/{my_twitter}[icon:twitter[]] https://github.com/{my_github}[
 == Outline
 
 [%step]
-* Introduction into dependency management
+* Introduction dependency management
 * Docker development environment
 * Visual Studio Code
 * Python
@@ -126,7 +126,7 @@ image::tensorflow-pipdeptree.jpg[background, size=90%]
 
 [NOTE.speaker]
 --
-- Multiple dependencies to same module but with different version requirements 
+- Multiple depenedencies to same module but with different version requirements 
 - Required version as lower bound
 --
 
@@ -138,7 +138,7 @@ image::tensorflow-pipdeptree.jpg[background, size=90%]
 * Important tool for software development
 * Images shared at https://hub.docker.com/[DockerHub,role=external,window=_blank]
 * Flexible deployment (Orchestration) via Kubernetes
-* Continuous Integration (https://jenkins.h-its.org/blue/organizations/jenkins/AIN%2FGitHub%20HITS-AIN%2FPINK/detail/master/211/pipeline[Jenkins,role=external,window=_blank]) by https://github.com/HITS-AIN/PINK/blob/master/Jenkinsfile[Jenkinsfile,role=external,window=_blank] 
+* Continues Integration (https://jenkins.h-its.org/blue/organizations/jenkins/AIN%2FGitHub%20HITS-AIN%2FPINK/detail/master/211/pipeline[Jenkins,role=external,window=_blank]) in https://github.com/HITS-AIN/PINK/blob/master/Jenkinsfile[Jenkinsfile,role=external,window=_blank] 
 
 
 == Docker Development Environment
