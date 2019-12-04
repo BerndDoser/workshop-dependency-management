@@ -16,18 +16,22 @@ mailto:{my_email}[{my_name}]
 
 {date}
 
-image::HITS_RGB_eng.jpg[width=40%]
-https://h-its.org[HITS gGmbH]
+image:HITS_RGB_eng.jpg[link=https://h-its.org,width=40%]
 
 https://twitter.com/{my_twitter}[icon:twitter[]] https://github.com/{my_github}[icon:github[]]
 
 
 == Who am I?
 
-* https://github.com/HITS-MBM/gromacs-fda[GROMACS-FDA]
+[%step]
+* PhD in theoretical chemistry
+* Scientific software developer since 15 years
+* https://github.com/HITS-MBM/gromacs-fda[GROMACS-FDA], https://github.com/HITS-MCM/gromacs-ramd[GROMACS-RAMD]
 * https://github.com/HITS-AIN/PINK[PINK]
-* https://github.com/HITS-MCM/gromacs-ramd[GROMACS-RAMD]
 * https://emcl-gitlab.iwr.uni-heidelberg.de/hiflow3.org/hiflow3[HiFlow3]
+* Linear scaling electron-electron correlation
+* Tailor-made force fields
+* https://github.com/BrainTwister/BlasBooster[BlasBooster]
 
 
 == Outline
@@ -37,7 +41,7 @@ https://twitter.com/{my_twitter}[icon:twitter[]] https://github.com/{my_github}[
 * Docker development environment
 * Visual Studio Code
 * Python
-** PIP, virtenv, setup.py, wheels
+** pip, virtualenv, setup.py, wheels
 * Conan.io
 ** install, create, remotes
 
@@ -49,7 +53,7 @@ Dependency management is a technique for declaring, resolving and using dependen
 (Source: https://devopedia.org/dependency-manager[Devopedia])
 
 - Keep your dependencies up to date to reduce technical debts
-- Most dependencies are project related.
+- Most dependencies are project related
 
 
 == Package vs Dependency
@@ -157,18 +161,13 @@ image::docker-devel-env.jpg[width=60%]
 //|===
 
 
-== PIP 
+== Package installer for Python (PIP) 
 
-- Find, install and publish Python packages: https://pypi.org
-
-- Use a virtual environment and a list of requirements to organize your dependencies.
-
-
-== Identify dependency relationship
-
-* pip show
-* pipdeptree
-* Why is a package 
+- Dependency Manager
+- https://pypi.org[Python Package Index,role=external,window=_blank]
+- Build recipe as code 'setup.py' from setuptools
+- Wheels for platform-specific C extensions (replace eggs)
+- Docker image 'manylinux' with old 'glibc' to support most Linux distributions
 
 
 == Exercise 1: Using pip
@@ -222,9 +221,9 @@ https://github.com/tensorflow/tensorflow/blob/master/tensorflow/tools/pip_packag
 == Conan repositories
 
 [%step]
-* https://bintray.com/conan/conan-center[conan-center]: Official maintained by the Conan team (178 packages)
-* https://bintray.com/bincrafters/public-conan[bincrafters]: Group of OSS developers (370 packages)
-* https://bintray.com/braintwister/conan[braintwister]: Personal repository at Bintray for OSS
+* https://bintray.com/conan/conan-center[conan-center,role=external,window=_blank]: Official maintained by the Conan team (178 packages)
+* https://bintray.com/bincrafters/public-conan[bincrafters,role=external,window=_blank]: Group of OSS developers (370 packages)
+* https://bintray.com/braintwister/conan[braintwister,role=external,window=_blank]: Personal repository at Bintray for OSS
 * Running _conan_server_ for on-site repository
 
 
