@@ -310,6 +310,7 @@ _Build package conan-example_
 
 * Write conanfile.py
 * Create package
+* Upload to Bintray
 
 
 == Thank you 

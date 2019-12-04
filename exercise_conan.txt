@@ -9,18 +9,30 @@ cmake ..
 
 conan install ..
 
+# More dependencies in conanfile.txt
+https://github.com/BrainTwister/BlasBooster/blob/master/conanfile.txt
+
 
 
 
 conan remote list
 
+conan remote add braintwister https://api.bintray.com/conan/braintwister/conan 
+conan remote add conan-community https://api.bintray.com/conan/conan-community/conan
+conan remote add bincrafters https://api.bintray.com/conan/bincrafters/public-conan
+
+conan search -r braintwister
 conan search -r all record
 
-git clone https://github.com/BrainTwister/record.git
+conan upload conan-example/1.0@bernddoser/testing --all -r=braintwister
+
+
 
 conan create . braintwister/testing
 conan create . braintwister/testing --build gtest
 conan create . braintwister/testing --build missing
+
+
 
 
 
