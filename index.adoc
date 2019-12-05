@@ -24,14 +24,14 @@ https://twitter.com/{my_twitter}[icon:twitter[]] https://github.com/{my_github}[
 == Who am I?
 
 [%step]
-* PhD in theoretical chemistry
 * Scientific software developer since 15 years
-* https://github.com/HITS-MBM/gromacs-fda[GROMACS-FDA,role=external,window=_blank], https://github.com/HITS-MCM/gromacs-ramd[GROMACS-RAMD,role=external,window=_blank]
-* https://github.com/HITS-AIN/PINK[PINK,role=external,window=_blank]
-* https://emcl-gitlab.iwr.uni-heidelberg.de/hiflow3.org/hiflow3[HiFlow3,role=external,window=_blank]
+* PhD in theoretical chemistry
 * Linear scaling electron-electron correlation
 * Tailor-made force fields
 * https://github.com/BrainTwister/BlasBooster[BlasBooster,role=external,window=_blank]
+* https://github.com/HITS-MBM/gromacs-fda[GROMACS-FDA,role=external,window=_blank], https://github.com/HITS-MCM/gromacs-ramd[GROMACS-RAMD,role=external,window=_blank]
+* https://github.com/HITS-AIN/PINK[PINK,role=external,window=_blank]
+* https://emcl-gitlab.iwr.uni-heidelberg.de/hiflow3.org/hiflow3[HiFlow3,role=external,window=_blank]
 
 
 == Outline
@@ -43,7 +43,7 @@ https://twitter.com/{my_twitter}[icon:twitter[]] https://github.com/{my_github}[
 * Python
 ** pip, virtualenv, setup.py, wheels
 * Conan.io
-** install, create, remotes
+** install, create, upload
 
 
 == Introduction
@@ -52,8 +52,8 @@ Dependency management is a technique for declaring, resolving and using dependen
 
 (Source: https://devopedia.org/dependency-manager[Devopedia,role=external,window=_blank])
 
+- Dependencies are project related
 - Keep your dependencies up to date to reduce technical debts
-- Most dependencies are project related
 - Distinguish build-time and runtime requirements
 
 
@@ -68,11 +68,6 @@ Dependency management is a technique for declaring, resolving and using dependen
 ** pip, conda (Python)
 ** conan ({cpp})
 
-[NOTE.speaker]
---
-- pip was building everything from scratch, until wheels were introduced
-- conda has more packages
---
 
 == What is a dependency
 
@@ -96,7 +91,7 @@ image::circular.jpg[size=50%]
 <=,>=: inclusive ordered
 <,>: exclusive ordered
 ----
-* Compatibility
+* Compatibility (for stability)
 +
 [source, txt]
 ----
@@ -109,7 +104,8 @@ image::circular.jpg[size=50%]
 ----
 ~=3.1.0, != 3.1.3: version 3.1.0 or later,
                    but not version 3.1.3
-                   and not version 3.2.0 or later
+                   and not version 3.2.0
+                   or later
 ----
 
 [NOTE.speaker]
@@ -149,7 +145,7 @@ image::docker-devel-env.jpg[link=https://github.com/BrainTwister/docker-devel-en
 == Visual Studio Code
 
 * Free and open source (not Microsoft Visual Studio)
-* Most popular development environment https://insights.stackoverflow.com/survey/2019#technology-_-most-popular-development-environments[2019]
+* Most popular development environment https://insights.stackoverflow.com/survey/2019#technology-_-most-popular-development-environments[2019,role=external,window=_blank]
 * Language Server Protocol (LSP) as open standard for language specific features
 ** code completion and navigation
 ** refactoring, syntax highlighting, error markers
@@ -160,7 +156,7 @@ image::docker-devel-env.jpg[link=https://github.com/BrainTwister/docker-devel-en
 
 - https://pypi.org[Python Package Index,role=external,window=_blank]
 - Build recipe as code 'setup.py' from setuptools
-- Wheels for platform-specific C extensions (replace eggs)
+- Wheels for platform-specific C extensions (replace eggs, which was building everything from scratch)
 - Docker image 'manylinux' with old 'glibc' to support most Linux distributions
 
 
