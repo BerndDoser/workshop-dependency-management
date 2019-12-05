@@ -1,12 +1,12 @@
 introduction dependency management		20
 docker environment				20
-vscode						15   55
+vscode						15   55  14:00
 
 break						15   70
 
 python pip, virtenv, requirements		20
 python setup.py					30
-python wheels					20  140
+python wheels					20  140  15:20
 
 break						15  155
 

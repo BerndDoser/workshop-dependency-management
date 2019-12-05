@@ -69,18 +69,32 @@ Dependency management is a technique for declaring, resolving and using dependen
 ** conan ({cpp})
 
 
-== What is a dependency
+== What is a software dependency
 
 * Module A uses functionality of module B
 * Transitive dependency -> Dependency graph
 +
 image::transitive.jpg[size=50%]
-* Circular dependency
+
+
+== Dependency hell
+
+* Too many dependencies
+* Conflicting dependencies
+* Circular dependencies
 +
 image::circular.jpg[size=50%]
 
 
-== Version specifier
+== Version numbering 
+
+major.minor[.patch]
+
+* Bugfixes in minor version
+* New interfaces and features in major version
+
+
+== Version specifier 
 
 * Comparison
 +
@@ -225,7 +239,7 @@ _Create package python-example_
 * Client-server architecture similar to git push/pull
 * CMake integration with https://github.com/conan-io/cmake-conan[cmake-conan,role=external,window=_blank]
 * Support all platforms (Linux, Apple, Windows, Android, embedded, ...)
-* Support all build (CMake, Makefile, Visual Studio, ...)
+* Support all build systems (CMake, Makefile, Visual Studio, ...)
 
 
 == Conan repositories
